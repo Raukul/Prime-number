@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+            Prime numbers
+        </title>
+    </head>
+    <body>
+        <script>
+            var often = prompt("How many prime numbers should I find?");
+            var i = 0;
+            var primes = 0;
+            do{
+                
+                var count = 0;
+                var divide = [];
+                var morecount = 0;
+
+                do{
+                    divide.push(count);
+                    count++
+                }while (count <= i);
+
+                var count2 = 0
+
+                do {
+                    if (i % divide[count2] == 0) {
+                        morecount++;
+                    };
+                    count2++;
+                }while (count2 <= i);
+
+                if (morecount == 2){primes++;
+                document.write(i + " ");};
+                i++; 
+
+            }while(primes<often);
+        </script>
+    </body>
+</html>
